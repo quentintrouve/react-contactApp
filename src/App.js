@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import Titre from './Titre';
+import Titre from './Titre/Titre';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {
 
