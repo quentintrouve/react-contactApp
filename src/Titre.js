@@ -1,11 +1,11 @@
-import { Component } from 'react';
+import React from 'react'
 
-class Titre extends Component {
-  render() {
-    return (
-      <h1>Bienvenue {this.props.name}.</h1>
-    )
-  }
+function Titre(props) {
+  return (
+    <div>
+      <h1>Bienvenue {props.name}.</h1>
+    </div>
+  )
 }
 
-export default Titre
+export default Titre;
