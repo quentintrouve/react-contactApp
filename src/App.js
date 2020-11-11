@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header'
-import Contact from './components/Contact'
+import Liste from './components/Liste'
 
 class App extends Component {
 
@@ -9,10 +9,9 @@ class App extends Component {
     return (
       <div className='App'>
         <Header />
-        <Contact />
-        <Contact />
-        <Contact />
-        <Contact />
+        <div className="container">
+          <Liste />
+        </div>
       </div>
     )
   }
