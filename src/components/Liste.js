@@ -26,18 +26,28 @@ class Liste extends Component {
     ]
   }
 
+  handleDeleteContact = (id) => {
+    const contactsUpdated = this.state.contacts.filter(contact =>
+      contact.id !== id)
+
+    this.setState({
+      contacts: contactsUpdated
+    });
+  }
+
   render() {
     return (
-      <div>
+      <>
         {this.state.contacts.map(contact => (
           <Contact
             nom={contact.nom}
             email={contact.email}
             tel={contact.tel}
+            delete={() => { this.handleDeleteContact(contact.id) }}
             key={contact.id}
           />
         ))}
-      </div>
+      </>
     )
   }
 }
