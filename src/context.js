@@ -10,6 +10,12 @@ const reducer = (state, action) => {
         contacts: state.contacts.filter(contact =>
           contact.id !== action.payload)
       };
+      case 'ADD_CONTACT':
+        return {
+          // création d'un nouveau tableau avec les données du submit (action.payload)
+          // et les données déjà contenues dans notre state (...state.contacts)
+          contacts: [action.payload, ...state.contacts]
+        }
     default:
       return state;
   }
