@@ -8,12 +8,19 @@ class AddContact extends Component {
     tel: '',
   }
 
+  onChange = event => this.setState({[event.target.name]: event.target.value})
+
+  onSubmit = event => {
+    event.preventDefault()
+    console.log(this.state)
+  }
+
   render() {
     return (
       <div className='card mb-3'>
         <div className='card-header'>Ajouter un contact</div>
         <div className='card-body'>
-          <form>
+          <form onSubmit={this.onSubmit}>
             <div className='form-group'>
               <label htmlFor='nom'>Nom</label>
               <input
