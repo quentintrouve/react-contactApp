@@ -13,6 +13,9 @@ class AddContact extends Component {
 
   onSubmit = (dispatch,event) => {
     event.preventDefault()
+
+    // Ici this fait référence aux valeurs rendues par le submit
+    // C'est possible grâce au .bind(this, ..) situé sur le form
     const newContact = {
       nom: this.state.nom,
       email: this.state.email,
