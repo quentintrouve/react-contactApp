@@ -7,10 +7,18 @@ function Header() {
       <nav className='navbar navbar-dark bg-primary mb-3 py-0'>
         <div className='container'>
           <a href='/' className='navbar-brand'>AppContacts</a>
-          <ul className='navbar-nav'>
-            <li className='nav-item ml-auto'>
-              <Link to='/addContact' className='nav-link'>Accueil</Link>
-              <Link to='/Liste' className='nav-link'>My Contacts</Link>
+          <ul className='navbar-nav d-inline-block'>
+            <li className='nav-item d-inline-block mr-2'>
+              <Link to='/' className='nav-link'>Accueil</Link>
+            </li>
+            <li className='nav-item d-inline-block mr-2'>
+              <Link to='/liste' className='nav-link'>Mes contacts</Link>
+            </li>
+            <li className='nav-item d-inline-block mr-2'>
+              <Link to='/ajouter' className='nav-link'>Ajouter</Link>
+            </li>
+            <li className='nav-item d-inline-block mr-2'>
+              <Link to='/apropos' className='nav-link'>À propos</Link>
             </li>
           </ul>
         </div>
