@@ -1,12 +1,13 @@
 import { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Provider } from './context'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './components/interface/Header'
 import Liste from './components/contact/Liste'
 import AddContact from './components/contact/AddContact'
 import APropos from './components/pages/APropos'
 import Home from './components/pages/Home'
+import Erreur from './components/pages/Erreur'
 
 class App extends Component {
 
@@ -17,10 +18,13 @@ class App extends Component {
           <div className='App'>
             <Header />
             <div className="container">
-              <Route exact path='/' component={Home} />
-              <Route exact path='/liste' component={Liste} />
-              <Route exact path='/ajouter' component={AddContact} />
-              <Route exact path='/apropos' component={APropos} />
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/liste' component={Liste} />
+                <Route exact path='/ajouter' component={AddContact} />
+                <Route exact path='/apropos' component={APropos} />
+                <Route component={Erreur} />
+              </Switch>
             </div>
           </div>
         </Router>
